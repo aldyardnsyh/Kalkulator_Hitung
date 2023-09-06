@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_opr"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_above="@id/txt_main"
+        android:textSize="24sp"
+        android:text="."
+        android:gravity="right"
+        android:layout_weight="1"
+        android:inputType="numberDecimal"
+        android:textColor="@color/semi_grey" />
+
+    <TextView
+        android:id="@+id/txt_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout1"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:gravity="right"
+        android:layout_marginBottom="48dp"
+        android:textColor="@color/black"
+        android:textSize="48sp" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_above="@id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/opr_clear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="AC"
+            android:onClick="clearCal"
+            android:textSize="20sp"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_margin="2sp"
+            app:cornerRadius="4dp" />
+
+        <Button
+            android:id="@+id/delNum"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2sp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/semi_grey"
+            android:onClick="deleteLastCharacter"
+            android:text="⌫"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:cornerRadius="4dp" />
+
+        <Button
+            android:id="@+id/percentCal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="%"
+            android:onClick="calculatePercentage"
+            android:textSize="24sp"
+            android:backgroundTint="@color/semi_grey"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_margin="2sp"
+            app:cornerRadius="4dp" />
+
+        <Button
+            android:id="@+id/opr_divide"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="/"
+            android:onClick="inputOpr"
+            android:textSize="24sp"
+            android:backgroundTint="@color/semi_grey"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_margin="2sp"
+            app:cornerRadius="4dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_above="@id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/num_7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="7"
+            android:onClick="inputNumber"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_margin="2sp" />
+
+        <Button
+            android:id="@+id/num_8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="8"
+            android:onClick="inputNumber"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_margin="2sp" />
+
+        <Button
+            android:id="@+id/num_9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="9"
+            android:onClick="inputNumber"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_margin="2sp" />
+
+        <Button
+            android:id="@+id/opr_multiply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="*"
+            android:onClick="inputOpr"
+            android:textSize="24sp"
+            android:backgroundTint="@color/semi_grey"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_margin="2sp"
+            app:cornerRadius="4dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_above="@id/layout4"
+        android:layout_margin="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/num_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="4"
+            android:onClick="inputNumber"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_margin="2sp" />
+
+        <Button
+            android:id="@+id/num_5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="5"
+            android:onClick="inputNumber"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_margin="2sp" />
+
+        <Button
+            android:id="@+id/num_6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="6"
+            android:onClick="inputNumber"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_margin="2sp" />
+
+        <Button
+            android:id="@+id/opr_sum"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="+"
+            android:onClick="inputOpr"
+            android:textSize="24sp"
+            android:backgroundTint="@color/semi_grey"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_margin="2sp"
+            app:cornerRadius="4dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_above="@id/layout5"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/num_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:onClick="inputNumber"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_margin="2sp" />
+
+        <Button
+            android:id="@+id/num_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="2"
+            android:onClick="inputNumber"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_margin="2sp" />
+
+        <Button
+            android:id="@+id/num_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="3"
+            android:onClick="inputNumber"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_margin="2sp" />
+
+        <Button
+            android:id="@+id/opr_minus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="-"
+            android:onClick="inputOpr"
+            android:textSize="24sp"
+            android:backgroundTint="@color/semi_grey"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_margin="2sp"
+            app:cornerRadius="4dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout5"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/num_00"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="00"
+            android:onClick="inputNumber"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_margin="2sp" />
+
+        <Button
+            android:id="@+id/num_0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:onClick="inputNumber"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_margin="2sp" />
+
+        <Button
+            android:id="@+id/dots"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="."
+            android:onClick="inputNumber"
+            android:textSize="24sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_margin="2sp" />
+
+        <Button
+            android:id="@+id/result"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="="
+            android:onClick="calResult"
+            android:textSize="24sp"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_margin="2sp"
+            app:cornerRadius="4dp" />
+    </LinearLayout>
+</RelativeLayout>
+
